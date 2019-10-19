@@ -33,7 +33,7 @@ class ImagesController < ApplicationController
     def destroy
         @image = Image.find params[:id]
         @image.destroy
-        redirect_to image_path
+        redirect_to images_path
     end
     private def image_params
         params.require(:image).permit(:description)
