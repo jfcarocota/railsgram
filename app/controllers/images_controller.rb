@@ -1,5 +1,10 @@
 class ImagesController < ApplicationController
-    def def new
+    
+    def index
+
+    end
+
+    def new
     
     end
 
