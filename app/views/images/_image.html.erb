@@ -1,6 +1,6 @@
 <div class="col">
     <figure>
-        <img src="https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png" class="fugure-img img-fluid rounded">
+        <%= image_tag image.picture.thumb.url, class: 'fugure-img img-fluid rounded' %>
         <figcaption  class="figure-caption">
             <%= image.description %>
             <%= link_to  'Edit', edit_image_path(image) %> 
