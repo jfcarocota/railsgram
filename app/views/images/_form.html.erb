@@ -5,17 +5,17 @@
         </div>
     <% end %>
     <div class="form-group">
-        <%= form_for @image do |f| %>
-            <%= f.label :description %> <br>
-            <%= f.text_field :description, class: 'form-control' %> <br>
+        <%= form_for @image do |form| %>
+            <%= form.label :description %> <br>
+            <%= form.text_field :description, class: 'form-control' %> <br>
             <%- if @image.errors[:description].any? %>
               <span class="badge badge-pill badge-danger">
                   <%= @image.errors[:description].first %>
               </span>
             <% end %>
             <br>
-            <%= f.label :picture %> <br>
-            <%= f.file_field :picture %> <br>
-            <%= f.submit 'Send', :class => 'btn btn-primary' %>
+            <%= form.label :picture %> <br>
+            <%= form.file_field :picture %> <br>
+            <%= form.submit 'Send', :class => 'btn btn-primary' %>
         <% end %>
     </div>
