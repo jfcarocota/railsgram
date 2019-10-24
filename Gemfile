@@ -56,3 +56,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'carrierwave', '~> 2.0', '>= 2.0.2'
 
 gem 'mini_magick'
+
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
