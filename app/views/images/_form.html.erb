@@ -1,18 +1,9 @@
-    <%- if @image.errors.any? %>
-        <div class="alert alert-danger">
-            <h4 class="alert-heading">Algo ha salido mal :(</h4>
-            <p>Intenta llenar los datos completos del formulario</p>
-        </div>
-    <% end %>
     <div class="form-group">
-        <%= form_for @image do |form| %>
+        <%= form_for @image, builder: CustomFormBuilder do |form| %>
+            <%= form.form_error %>
             <%= form.label :description %> <br>
             <%= form.text_field :description, class: 'form-control' %> <br>
-            <%- if @image.errors[:description].any? %>
-              <span class="badge badge-pill badge-danger">
-                  <%= @image.errors[:description].first %>
-              </span>
-            <% end %>
+            <%= form.field_error :description %>
             <br>
             <%= form.label :picture %> <br>
             <%= form.file_field :picture %> <br>
