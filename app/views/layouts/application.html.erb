@@ -9,8 +9,23 @@
   </head>
 
   <body>
+
+    <ul class="nav justify-content-end">
+      <%- if user_signed_in?%>
+        <li clsss="nav-item">
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li clsss="nav-item">
+          <%= link_to 'Login', new_user_session_path %>
+        </li>
+      <% end %>
+    </ul>
+
     <div class="container">
-        <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
     </div>
   </body>
 </html>
