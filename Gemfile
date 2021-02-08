@@ -53,6 +53,6 @@ gem 'rake', '~> 13.0'
 
 gem 'bootstrap', '~> 4.3.1'
 
-gem 'carrierwave', '~> 2.0', '>= 2.0.2'
+gem 'carrierwave', '~> 2.1'
 
 gem 'mini_magick'
